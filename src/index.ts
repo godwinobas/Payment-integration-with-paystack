@@ -1,7 +1,6 @@
 import bodyParser from 'body-parser';
-import express, { Application, NextFunction, Request, Response } from 'express';
-import { StatusCodes } from 'http-status-codes';
-import { ApiError, BadRequestError, NotFoundError } from './utils/ApiError';
+import express, { Application, Request, Response } from 'express';
+import { NotFoundError } from './utils/ApiError';
 import { ErrorHandler } from './utils/middlewares/ErrorHandler';
 
 const app: Application = express();
