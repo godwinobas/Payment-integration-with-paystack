@@ -17,10 +17,11 @@ services:
     depends_on:
       - postgres
     container_name: online-payment
-    build:
+    build: .  # Specify the build context as a string here
     volumes:
       - ./:/usr/src/app
-    ports: -'5000:5000'
+    ports:
+      - '5000:5000'  # Corrected port mapping syntax
     command: npm run dev
     networks:
       - web
@@ -42,4 +43,4 @@ services:
 
 networks:
   web:
-  driver: bridge
+    driver: bridge
